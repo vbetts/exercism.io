@@ -4,7 +4,6 @@ import re
 
 def is_pangram(phrase):
 	alphabet = set()
-	phrase = "".join(phrase.split())
 	phrase = re.sub("[^a-zA-Z]", "", phrase)
 	phrase = phrase.lower()
 	for letter in phrase:
