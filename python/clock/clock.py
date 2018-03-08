@@ -1,14 +1,24 @@
 
 #This solution encompasses everything but the 'add' component
-def Clock(hours=0, minutes=0):
+class Clock(object):
+    def __init__(self, hours, minutes):
+        self.hours, self.minutes = self.calculate(hours, minutes);
 
-    mins = (hours*60) + minutes;
+    def __str__(self):
+        hour = str(self.hours).zfill(2)
+        mins = str(self.minutes).zfill(2)
+        return "{}:{}".format(hour,mins)
 
-    minRemainder = mins % 60
+    def __eq__(self, other):
+        return self.minutes == other.minutes and self.hours == other.hours
 
-    hours = (mins - minRemainder)/60
+    def calculate(self, hours, minutes):
+        mins = (hours*60) + minutes;
+        minRemainder = mins % 60
+        hours = (mins - minRemainder)/60
+        timeH = int(hours % 24)
+        return timeH, minRemainder
 
-    timeH = int(hours % 24)
-
-    return str(timeH).zfill(2) + ":" + str(minRemainder).zfill(2)
+    def add(self, other):
+        return Clock(self.hours, self.minutes+other)
 
