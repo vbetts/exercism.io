@@ -1,5 +1,5 @@
-import math
 
+#This solution encompasses everything but the 'add' component
 def Clock(hours=0, minutes=0):
 
     mins = (hours*60) + minutes;
