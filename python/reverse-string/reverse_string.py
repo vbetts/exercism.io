@@ -21,7 +21,7 @@ def reverse(input=''):
 #    while i <= r:
 #        lastIndex = len(input)-1-i
 #        lastLetter = input[lastIndex]
-#        input[input[lastIndex] = input[i]
+#        input[input[lastIndex]] = input[i]
 #        input[i] = lastLetter
 #        i+= 1
 #    return input
