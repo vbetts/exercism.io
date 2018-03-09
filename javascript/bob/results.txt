@@ -1,0 +1,17 @@
+Randomized with seed 15207
+Started
+.............F..........
+
+Failures:
+1) Bob ending with whitespace
+  Message:
+    Expected 'Whatever.' to equal 'Sure.'.
+  Stack:
+    Error: Expected 'Whatever.' to equal 'Sure.'.
+        at <Jasmine>
+        at UserContext.<anonymous> (/Users/victoriabetts/Documents/Programming/exercism.io/javascript/bob/bob.spec.js:113:20)
+        at <Jasmine>
+
+24 specs, 1 failure
+Finished in 0.029 seconds
+Randomized with seed 15207 (jasmine --random=true --seed=15207)
